@@ -1,6 +1,6 @@
 const curry = (fn, ...args) => {
   return function (...newArgs) {
-    return fn(...args, ...newArgs);
+    return fn.apply(null, [...args, ...newArgs]);
   };
 };
 
