@@ -1,10 +1,8 @@
 
 let valid = false;
 const elem = document.querySelector("#student-ssn");
-console.log("elem:", document.querySelector("#student-ssn"));
-elem.onkeyup = function (event) {
+elem.onkeyup = function () {
 	let val = elem.value;
-	console.log("val:", val);
 	if(val !== null && val.length !== 0) {
 		val = val.replace(/^\s*|\s*$|\-/g, '');
 		if(val.length === 9) {
